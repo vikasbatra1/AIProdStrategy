@@ -5,7 +5,11 @@
 Distributed AI Inference 
 
 **Product:**
-Distributed AI Inference across Verizon owned Data Centres
+Distributed AI Inference across Verizon owned Data Centers. 
+With ability to 
+- Lower inference costs by inference orchestration with capabilities like Model Routing, Inference location routing, No egress cost. 
+- Data Sovernity for Data 
+- Lower latency for latency sensitive applications.
 
 **Your Role:**
 
