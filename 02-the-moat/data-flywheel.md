@@ -4,23 +4,31 @@
 > The four loops below are the M2 starting point - adapt if your product has 2 or 6 loops instead of 4.
 > 
 Focusing only on the Cost Optimization as that is software capability that is applicable for this excercise. 
-Cost Optimization by Model Routing, KV Cache aware routing, Inference location routing, Batching,  
+Cost Optimization by Model Routing, KV Cache aware routing, Inference location routing, Batching, Rate limiting,  Given that this is future product listing some capabilities that will be developed 
  
 ## Flywheel Loops
 
 | Loop | What It Measures | Score 1 | Score 5 | Score |
 |------|------------------|---------|---------|-------|
-| **Correction** | Do users fix AI outputs? Is that signal captured and reused? | No capture | Automated retraining | __/5 |
+| **Correction** | Do users fix AI outputs? Is that signal captured and reused? | No capture | Automated retraining | 2/5 |
 | **Preference** | Does the product learn individual / team preferences over time? | Stateless | Deep personalization | __/5 |
 | **Domain Context** | Does usage in one area improve quality in adjacent areas? | Siloed | Cross-domain transfer | __/5 |
 | **Network** | Does each new user / team make the product better for everyone? | Isolated | Strong network effects | __/5 |
 
 ### Correction Loop - __/5
 **What you capture today:**
+Is the response meet your need? Ask: Retry or move to a higher/model 
+Did the response come in too late? Ask: Move to faster and more expensive option? 
+
 **How it compounds:**
 
 ### Preference Loop - __/5
 **What you capture today:**
+
+Catpure the preference per user for maximize token amount or maximize accuracy or maximize '
+
+Save it and use it in the Routing logic for that user or for that session. 
+
 **How it compounds:**
 
 ### Domain Context Loop - __/5
