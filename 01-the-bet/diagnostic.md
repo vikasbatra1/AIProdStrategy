@@ -43,7 +43,7 @@ Equinix, Akamai, AT&T and TMobile
 
 ---
 
-### Platform Exposure — 2/5
+### Platform Exposure — 3/5
 *Encroachment risk × pivot speed. If Apple/Google/OpenAI ships your hero feature native — then what?*
 
 **Score rationale:**
