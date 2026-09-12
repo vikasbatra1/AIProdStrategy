@@ -2,7 +2,10 @@
 
 > Score each loop 1-5. Your weakest loop is where competitors attack first.
 > The four loops below are the M2 starting point - adapt if your product has 2 or 6 loops instead of 4.
-
+> 
+Focusing only on the Cost Optimization as that is software capability that is applicable for this excercise. 
+Cost Optimization by Model Routing, KV Cache aware routing, Inference location routing, Batching,  
+ 
 ## Flywheel Loops
 
 | Loop | What It Measures | Score 1 | Score 5 | Score |
