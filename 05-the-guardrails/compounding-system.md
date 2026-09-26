@@ -12,8 +12,8 @@ The possible outputs are additional data for RAG, next round of Model fine tunin
 
 | Loop | Input | Output | Compounds? | Status |
 |------|-------|--------|-----------|--------|
-| Model Routing - Customer Feedback| Customer Thumbs up or down, End user repeat prompt that stopped after model escalation| Update the SLM data   | Y/N | active |
-| Security Guardrails |LLM as a judge output stating quality was low e.g. PII was not filtered out   | Update Sample data for SLM | Y | active /  |
+| Model Routing - End user Feedback| End users' Thumbs up or down, End user repeats the prompt (Semantically) that had to redirected to a higher/more capabale  model | Update the SLM data   | Y | active |
+| Security Guardrails |LLM as a judge output stating quality was low e.g. PII/PCI/PHI was not adequalty filtered out   | Update sample data for SLM | Y | active /  |
 | | | | Y/N | active / broken / missing |
 
 **Broken loop identified by partner:**
