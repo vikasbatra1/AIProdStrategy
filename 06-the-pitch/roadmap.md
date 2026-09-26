@@ -29,22 +29,29 @@
 
 **Thesis (1 sentence):**
 
-Offer a 
+Offer a Distributed AI Inference across customer's On premise Data Centers. 
+With ability to 
+- Lower inference costs by inference orchestration/intelligence determines what inference reuest will be served by what location/server cluster with capabilities such as Model Routing, KU VInference location routing,
+- - AI Security Guardrails (PII/PCI/PHI redaction)
+  -  Observabiliy. 
+   
 
 **The case:**
-1. Why now:
-2. What's defensible:
-3. The economics:
+1. Why now: Customer Challenge on Inference Cost Scaling. Intelligent serving cost reduction in experiments 50-75% cost reduction. 
+2. What's defensible: Leverage Operators underlying network.
+3. The economics:  Charge customer as %age (50%) of costs saved vs. projected unoptimized cost. with a minimum floor price. Security and Observability as optional add-ons priced separately. 
 
 **The risks:**
-1. Trust / failure modes:
-2. Scale / governance:
-3. Competitive:
+1. Trust / failure modes: Low or no cost reduction. 
+2. Scale / governance: 
+3. Competitive:  AI Gateway providers in the market place.
 
 **The ask:**
 
 ## M1 Baseline vs. Now
 *Your 3-sentence AI strategy from Module 1 vs. what you'd say now:*
+
+Invest in a high growth area with potential to generate higher margins with scale.
 
 **M1 baseline:**
 
