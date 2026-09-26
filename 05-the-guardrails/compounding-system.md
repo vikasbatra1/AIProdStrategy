@@ -25,11 +25,13 @@ The possible outputs are additional data for RAG or next round of Model fine tun
 
 ## Governance Policy
 
-**Scope:**
-**Autonomy boundaries:**
-**Escalation triggers:**
+**Scope:** All prompts and responses passing through the AI Gateway's guardrail layer, covering PII/PHI/PCI detection and redaction, prompt injection and jailbreak detection, and content moderation, across all connected models, applications, and agents. 
+**Autonomy boundaries:** Guardrails may automatically redact, mask, or block content matching approved policy rules without human review; any new rule category, threshold change, or use-case exception requires sign-off from data privacy and security stakeholders before deployment. 
+**Escalation triggers:** Repeated or high-confidence prompt injection/jailbreak attempts from a single user or agent, any guardrail bypass or failure (fail-open event), and any detected leakage of regulated data (e.g., CPNI) escalate immediately to security and compliance teams. 
 **Audit cadence:**
+Guardrail logs and redaction actions are reviewed monthly for false positive/negative rates and rule drift; a full policy and threshold review, including regulatory alignment, occurs quarterly or after any material incident.
 **Regulatory exposure (EU AI Act / other):**
+Sector specific for Healthcare and Financial sectors.
 
 ## Agent Topology
 <!-- If using agents: what can each agent do? What can't it do? Who approves what? -->
@@ -38,10 +40,13 @@ The possible outputs are additional data for RAG or next round of Model fine tun
 
 | Tool | Owner | Risk Level | Decision |
 |------|-------|-----------|----------|
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
+| The PCI Data (Payment Card Data) is being filtered out by a customer's own agent  | Customer Service - Workflow |  M | Ignore - communicate to customer the capability exists in the AI Gateway, if they choose to use it |
+| Teams bypassing the Gateway | Sales and Customer interviews - Capability | H | Partner  - A separate tool for Detection , via network/DLP tools identifying traffic to unsanctioned AI endpoints, and via IT asset/SaaS discovery for unauthorized AI subscriptions|
 | | | H / M / L | keep / govern / kill |
 
 **Total tools found:**
+2 
 **Tools after triage:**
+0, No capabilities to be built into the product.
 **Estimated hidden spend:**
+  $5000/M per customer to install the Detection tool.
