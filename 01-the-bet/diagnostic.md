@@ -5,7 +5,7 @@
 Distributed AI Inference 
 
 **Product:**
-Distributed AI Inference across Verizon owned Data Centers. 
+Distributed AI Inference across company owned Data Centers. 
 With ability to 
 - Lower inference costs by inference orchestration with capabilities like Model Routing, Inference location routing, No egress cost. 
 - Data Soverignity for Compliance
@@ -23,8 +23,8 @@ With ability to
 
 **Score rationale:**
 Score 1 for Wireline only access. All.
-Score 3 for Wireline + Wireless both access - AT&T 
-Score 2 for Wireless only - AT&T and TMO
+Score 3 for Wireline + Wireless both access - Network Operators 
+Score 2 for Wireless only - Network Operators
 
 **Named attacker (from partner challenge):**
 Equinix, Akamai  for Wireline 
