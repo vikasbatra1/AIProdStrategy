@@ -8,7 +8,8 @@ Distributed AI Inference
 Distributed AI Inference across Verizon owned Data Centers. 
 With ability to 
 - Lower inference costs by inference orchestration with capabilities like Model Routing, Inference location routing, No egress cost. 
-- Data Soverignity for Compliance and lower IP Exopsure Risk
+- Data Soverignity for Compliance
+- Lower IP Exopsure Risk
 - Lower latency for latency sensitive applications.
 
 **Your Role:**
