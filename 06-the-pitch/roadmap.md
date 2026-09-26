@@ -29,17 +29,17 @@
 
 **Thesis (1 sentence):**
 
-Offer a Distributed AI Inference across customer's On premise Data Centers. 
+Offer a Distributed Intelligent AI Inference orchestration across customer's On premise Data Centers, CSP environments and Neo Cloud environments 
 With ability to 
-- Lower inference costs by inference orchestration/intelligence determines what inference reuest will be served by what location/server cluster with capabilities such as Model Routing, KU VInference location routing,
+- Lower inference costs by inference orchestration/intelligence determines what inference request will be served by what location/server cluster with capabilities such as Model Routing, KV Cache aware routing, Prompt Caching, Rate Limiting etc.
 - - AI Security Guardrails (PII/PCI/PHI redaction)
-  -  Observabiliy. 
+  - Observabiliy (Cost per user, per group within the Enterprise, Secuirtym) 
    
 
 **The case:**
 1. Why now: Customer Challenge on Inference Cost Scaling. Intelligent serving cost reduction in experiments 50-75% cost reduction. 
-2. What's defensible: Leverage Operators underlying network.
-3. The economics:  Charge customer as %age (50%) of costs saved vs. projected unoptimized cost. with a minimum floor price. Security and Observability as optional add-ons priced separately. 
+2. What's defensible: Leverage Operators underlying network and relationships.
+3. The economics:  Charge customer as %age (50%) of costs saved vs. projected unoptimized cost, with a minimum floor price. Security and Observability as optional add-ons priced separately. 
 
 **The risks:**
 1. Trust / failure modes: Low or no cost reduction. 
