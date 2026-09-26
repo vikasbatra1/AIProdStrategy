@@ -1,12 +1,11 @@
 # Compounding System Design
 
 Assume the AI Gateway uses SLM for Model Routing (sending easy prompts to a cheap model and hard ones to a strong one)
-and SLM for Security Guardrails (PII detection, prompt-injection detection, and content moderation) with LLM as a judge. The LLM judging happens post response and not during the processing to reduce latency impact. The motivation is learning  
-that can happen after the processing is done.
+and SLM for Security Guardrails (PII detection, prompt-injection detection, and content moderation) with LLM as a judge. The LLM judging happens post response and not during the processing to remove any latency impact. The motivation for LLM as judge is that learning can happen after the processing is done.
 
 Rest of the capabilities are implemented without using and SLM or LLM. 
 
-The possible outputs are additional data for RAG or next round of Model fine tuning, improved System Prompt, updated  golden parameter set for Eval. Model config settings.
+The possible outputs are additional data for RAG, next round of Model fine tuning, improved System Prompt, updated golden parameter set for LLM as judge evalautaion. 
 
 
 ## Feedback Loops
