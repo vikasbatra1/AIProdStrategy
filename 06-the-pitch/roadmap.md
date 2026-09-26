@@ -29,6 +29,8 @@
 
 **Thesis (1 sentence):**
 
+Offer a 
+
 **The case:**
 1. Why now:
 2. What's defensible:
