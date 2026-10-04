@@ -29,11 +29,10 @@
 
 **Thesis (1 sentence):**
 
-Offer a Distributed Intelligent AI Inference orchestration across customer's On premise Data Centers, CSP environments and Neo Cloud environments 
-With ability to 
+Offer a Distributed  AI Inference Intelligence across enterprise customer's On premise Data Centers, CSP environments and Neo Cloud environments and all other Inference environments, with the ability to 
 - Lower inference costs by inference orchestration/intelligence determines what inference request will be served by what location/server cluster with capabilities such as Model Routing, KV Cache aware routing, Prompt Caching, Rate Limiting etc.
-- - AI Security Guardrails (PII/PCI/PHI redaction)
-  - Observabiliy (Cost per user, per group within the Enterprise, Secuirtym) 
+- - AI Security Guardrails (e.g. PII/PCI/PHI redaction)
+  - Observabiliy (Cost per user, per group within the Enterprise, Secuirty) 
    
 
 **The case:**
