@@ -2,7 +2,7 @@
 
 > Score each loop 1-5. Your weakest loop is where competitors attack first.
 
-**Scope:** This map covers DAII's **cost-optimization** capabilities, the core software value: model routing, semantic caching, KV-cache-aware routing, inference-location routing, batching and rate limiting. The guardrail feedback loop is covered in `05-the-guardrails/compounding-system.md`. Several capabilities are planned (DAII is a future product), so "captured today" means "captured from launch."
+**Scope:** This map covers DAII's **cost-optimization** capabilities, the core software value: model routing, semantic caching, KV-cache-aware routing, inference-location routing, batching and rate limiting. The guardrail feedback loop is covered in `05-the-guardrails/compounding-system.md`. All capabilities are planned (DAII is a future product), so "captured" means "captured at launch."
 
 **Privacy constraint for all loops:** regulated customers require that prompt and response content is never kept for training. Every loop below learns from **metadata, user actions and offline judge verdicts on redacted samples**, never from raw content.
 
@@ -12,7 +12,7 @@
 |------|------------------|---------|---------|-------|
 | **Correction** | Do users fix AI outputs? Is that signal captured and reused? | No capture | Automated retraining | 3/5 |
 | **Preference** | Does the product learn individual / team preferences over time? | Stateless | Deep personalization | 2/5 |
-| **Domain Context** | Does usage in one area improve quality in adjacent areas? | Siloed | Cross-domain transfer | 2/5 |
+| **Domain Context** | Does usage in one area improve quality in adjacent areas? | Siloed | Cross-domain transfer | 3/5 |
 | **Network** | Does each new user / team make the product better for everyone? | Isolated | Strong network effects | 3/5 |
 
 ### Correction Loop: 3/5
@@ -29,10 +29,13 @@
 
 **How it compounds:** preferences tune the routing threshold for each user, team or app, so fewer users override the router over time. Mostly this is settings that persist rather than learned personalization, hence 2/5.
 
-### Domain Context Loop: 2/5
+### Domain Context Loop: 3/5
 **What we capture:** within one customer, routing outcomes by task category (summarization, extraction, code, regulated-document Q&A).
 
-**How it compounds:** inside one customer, what the router learns in one application carries over to the customer's other applications with similar task categories. Across customers, it **does not carry over**: tenant isolation in regulated industries keeps learning inside each customer. This is the right policy, but it caps the loop.
+**How it compounds:** inside one customer, what the router learns in one application carries over to the customer's other applications with similar task categories. 
+Across customers, 
+- for regulated customers, it **does not carry over**: tenant isolation in regulated industries keeps learning inside each customer. This is the right policy, but it caps the loop. 
+- For non-regulated customers, it **does carry over**: increasing the compounding.    
 
 ### Network Loop: 3/5
 **What we capture:**
@@ -41,16 +44,11 @@
 
 **How it compounds:** each new customer improves the routing defaults for every customer (which model is degraded right now, which location is congested), and each new site on the network adds path data. **Honest comparison:** a large neutral router such as OpenRouter has far more cross-customer model data. Our edge is the network telemetry, not the model data.
 
-**Total Flywheel Score: 10/20**
+**Total Flywheel Score: 11/20**
 
-**Weakest Loop:** Domain Context. Learning cannot cross customers, because regulated tenants are isolated.
+**Weakest Loop:** Domain Context for regulated customers. Learning cannot cross customers, because regulated tenants are isolated.
 
 **Fix for weakest loop:**
-1. **Vertical routing packs** for healthcare and financial services, pre-trained on synthetic and de-identified task data, so each new regulated customer starts with a router already tuned to its industry.
-2. **Opt-in federated router learning:** customers share router weight updates, never prompts, to improve each industry pack.
-3. A standard **task-category taxonomy** across customers, so outcome metadata can be pooled without pooling content.
-
-Target: Domain Context moves from 2/5 to 4/5 in Horizon 3 (see roadmap).
 
 ---
 
@@ -101,12 +99,12 @@ The *adjacent* threat is now **Cloudflare**, an internet-edge network that alrea
 
 **Weeks 9-12: why users don't come back.** Metering and billing become embedded in the customer's finance processes, and routing improves with cross-customer data. Switching back would mean re-integrating billing and losing the tuned routing.
 
-**Our defense:**
+**Your defense:**
 1. **The data path never leaves the operator's network or the customer's premises.** This produces sovereignty evidence that holds up in HIPAA, GLBA and NYDFS audits, which a hosted router cannot offer.
 2. **Network-aware routing**, using path and congestion data that a neutral router cannot see.
 3. **Bundling into the existing enterprise network contract:** procurement is already approved and the customer gets one bill.
 4. **Co-opetition:** DAII can use OpenRouter as one upstream provider among many, which reduces the reason to switch.
-5. **Close the Domain Context gap** with vertical routing packs (see the fix above).
+5. **Close the Domain Context gap** with vertical routing packs.
 
 ### Sources
 - Stripe agrees to acquire OpenRouter: https://siliconangle.com/2026/08/19/stripe-buys-ai-model-router-openrouter-in-reported-7-5b-deal/ · https://aiunderstanding.org/news/stripe-agrees-to-acquire-openrouter-to-expand-ai-model-routing
