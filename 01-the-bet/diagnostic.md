@@ -1,13 +1,12 @@
 # Three-Axis Vulnerability Diagnostic
 
 > **Scoring direction used in this repo:** for Contextual Moat and Data Advantage, a higher score is stronger (better for us). For Platform Exposure, a higher score means more exposed (worse for us).
-> All figures in this repo are illustrative estimates, labeled as such. The operator is referred to generically as "a US Tier-1 telecom."
 
 ## Product
 
 **Product:** Distributed AI Inference Intelligence (DAII)
 
-DAII is network-driven inference intelligence for large and mid-size US enterprises in **regulated industries** (healthcare, financial services) that already buy network services from a US Tier-1 telecom. It sits in front of every inference request an enterprise generates. For each one, it decides **which model, which location, and which policy** applies. The goal is to lower token cost while maintaining quality, and to add security and privacy.
+DAII is network-driven inference intelligence for large and mid-size US enterprises that already buy network services from a US Tier-1 telecom. It sits in front of every inference request an enterprise generates. For each one, it decides **which model, which location, and which policy** applies. The goal is to lower token cost while maintaining quality, and to add security and privacy.
 
 It works across all of the customer's inference environments: private data centers, hyperscaler (CSP) clouds, neoclouds and edge inference locations.
 
@@ -15,7 +14,7 @@ It works across all of the customer's inference environments: private data cente
 
 - **Lower inference cost.** Inference orchestration covers model routing, inference-location routing, KV-cache-aware routing, semantic caching, batching and per-user rate limiting. Cloud egress charges are avoided for traffic kept on-prem or on the operator's network.
 - **Network-driven routing (the differentiator).** Wherever the telecom carries the traffic, routing decisions use the operator's own network topology and real-time congestion data. ISV AI gateways (F5, Kong, Portkey, OpenRouter) cannot see this.
-- **Data sovereignty for compliance.** The data path stays on the customer's premises or the operator's network, never a third-party SaaS.
+- **Data sovereignty for compliance.** The data path stays on the customer's premises or the operator's network, never a third-party SaaS, where required for enterprises in regulated sectors(healthcare, financial) .
 - **Lower IP exposure risk.** Prompts are never sent to a hosted intermediary.
 - **Lower latency** for latency-sensitive applications.
 - **AI security guardrails.** PII/PHI/PCI redaction, prompt-injection detection and content filtering.
