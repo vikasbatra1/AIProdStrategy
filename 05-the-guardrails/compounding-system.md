@@ -103,11 +103,11 @@ DAII **has no autonomous agents in its own runtime**. Its SLMs are classifiers a
 |------|-------|-----------|----------|
 | A customer's own agent already filters PCI (payment card) data before calling models | Customer service workflow (customer side) | M | **Keep.** It's the customer's control. Tell them DAII offers the same capability if they want it, and document the order of operations to avoid double redaction or conflicting outputs. |
 | Teams bypassing the gateway and calling AI endpoints directly | Business units, found in sales and customer interviews | **H** | **Govern.** This is a *revenue and value* risk: traffic that bypasses DAII is neither optimized nor protected. On traffic the operator carries, identify connections to unsanctioned AI endpoints from network data, with customer consent and within CPNI rules (planned for Horizon 2). Off-net, partner with DLP and SaaS-discovery tools. |
-| DAII's own team using public chatbots with customer data during design | Operator product and engineering team (internal) | H | **Govern.** Only sanctioned enterprise AI tools are allowed. Customer data stays in approved environments. Use is logged. |
 
-**Total tools found:** 3
 
-**Tools after triage:** 3. One is kept as is; two are governed. None are killed.
+**Total tools found:** 2
+
+**Tools after triage:** 2. One is kept as is; one is governed. None are killed.
 - The network-based discovery capability is added to the roadmap (Horizon 2).
 - Off-net discovery stays with partners.
 
