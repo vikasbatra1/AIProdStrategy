@@ -112,10 +112,4 @@ A human steps in at three levels:
 
 ## Red-Team Findings
 
-*What failure mode did your partner find that you missed?* (Partner session pending; these are self red-team findings to bring to it.)
-
-1. **Cross-user semantic cache leakage.** A shared semantic cache could return an answer built from a document the requesting user may not see. **Fix:** scope the cache by user and permission context in regulated tenants (golden row 5).
-2. **Cost-inflation attack.** Padded prompts can push the router into frontier routing and inflate the bill. **Fix:** adversarial training rows, plus per-user cost anomaly alerts (row 9).
-3. **Residency bypass through failover.** During an outage, failover could route a residency-restricted request to a non-compliant location. **Fix:** residency is a hard constraint in the router, and failover lists are pre-filtered (row 10).
-4. **Regulated data in judge samples.** Replaying PHI to an external judge would itself be a compliance breach. **Fix:** samples are redacted first, and the judge is self-hosted inside the operator's footprint.
-5. **Silent quality decay.** If dissatisfied users stop giving feedback instead of retrying, the router drifts toward cheaper tiers unnoticed. **Fix:** judge sampling that does not depend on user feedback, plus about 1% exploration traffic always routed to the default model (see M5).
+*What failure mode did your partner find that you missed?* 
