@@ -77,7 +77,7 @@ For reference, RouteLLM reached 95% of GPT-4's quality while sending only 26% of
 
 **Current pricing:** none. DAII is a new product. The operator currently sells enterprise connectivity (wireline, wireless, SD-WAN), and AI traffic rides on it as ordinary traffic.
 
-**Proposed AI pricing:** a tiered platform fee by governed requests per month, with **no component tied to a percentage of savings**.
+**Proposed AI pricing:** a tiered platform fee by governed requests per month.
 
 | Tier | Included requests/month | Platform fee | Overage |
 |---|---|---|---|
@@ -89,9 +89,7 @@ For reference, RouteLLM reached 95% of GPT-4's quality while sending only 26% of
 - **Add-ons, priced separately:** Advanced Security Guardrails (prompt-injection and jailbreak detection, content moderation, red-team reports) and Observability (cost by user and group, compliance reporting). The margin analysis above **excludes** add-on revenue, so add-ons are upside.
 - **Network bundle:** 10–15% discount when attached to an existing enterprise network contract. At a 15% discount, blended gross margin falls from about 83% to about 80%.
 
-**Why not a share of savings:** computing a baseline that both sides agree on is hard. A disputed baseline turns every invoice into a negotiation, and regulated procurement teams don't like variable fees they can't forecast.
-
-**Savings are reported, not billed.** DAII shows estimated savings against the customer's default model in the Observability dashboard (method in M4). This proves value at renewal without ever being the basis of an invoice.
+**Savings are reported, not billed.** DAII shows estimated savings against the customer's default model in the Observability dashboard (method in M4). This proves value at renewal.
 
 **Value check:** the Starter reference customer spends about $100K/month on LLMs. At 35–60% savings that is $35–60K/month saved, against a $9K fee.
 
