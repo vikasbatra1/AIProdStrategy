@@ -72,7 +72,7 @@ Retrained router or guardrail SLMs need a golden-dataset pass plus ML-ops sign-o
 - **Quarterly, or after any material incident:** full policy and threshold review, including regulatory alignment.
 - **Continuous:** an audit trail of every redaction and routing decision, kept for the customer's required retention period.
 
-**Regulatory exposure (EU AI Act / other):** The lead segment is US healthcare and financial services, so the exposure is **sector-specific**:
+**Regulatory exposure (EU AI Act / other):** For the Regulated segment (US healthcare and financial services), the exposure is **sector-specific**:
 
 | Regime | Why it applies to DAII |
 |---|---|
