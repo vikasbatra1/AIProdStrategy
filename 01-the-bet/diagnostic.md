@@ -1,7 +1,5 @@
 # Three-Axis Vulnerability Diagnostic
 
-> **Scoring direction used in this repo:** for Contextual Moat and Data Advantage, a higher score is stronger (better for us). For Platform Exposure, a higher score means more exposed (worse for us).
-
 ## Product
 
 **Product:** Distributed AI Inference Intelligence (DAII)
@@ -56,15 +54,15 @@ The score depends on which access the customer buys from the operator:
 | Wireless only | 2/5 | Some mobile path visibility, but enterprise apps mostly run in data centers and clouds |
 | Wireline + wireless | 3/5 | End-to-end path visibility plus a bundled contract |
 
-The lead segment (regulated enterprises in the existing base) is mostly wireline-led, so the **blended score is 2/5**.
+The lead segment (enterprises in the existing base) is mostly wireline-led, so the **blended score is 2/5**.
 
 **Named attackers:**
 
 - Data center and edge platforms: Equinix, Akamai
-- Wireless operators: AT&T, T-Mobile
+- Wireless operators: AT&T, T-Mobile, Verizon
 - Wireline operators, e.g. Comcast
 - AI gateway and guardrail ISVs: **F5** (AI Gateway and AI Guardrails, already shipping), Kong, Portkey
-- Neutral model routers: **OpenRouter**, which Stripe agreed to acquire on August 19, 2026
+- Neutral model routers: **OpenRouter**, which Stripe agreed to acquire.
 
 ---
 
@@ -73,13 +71,13 @@ The lead segment (regulated enterprises in the existing base) is mostly wireline
 
 **Score rationale:**
 
-By design, DAII does **not** store customer prompt or response content for learning; regulated buyers require that. It does capture proprietary **metadata** that compounds over time:
+By design, DAII does **not** store customer prompt or response content for learning; regulated buyers often require that. It does capture proprietary **metadata** that compounds over time:
 
 - **Routing outcomes:** which model tier served which kind of request, at what cost and latency, and whether the user retried or escalated.
 - **Network telemetry:** path latency and congestion between enterprise sites and inference locations. Only the operator can see this.
 - **Offline judge verdicts** on a roughly 1% redacted sample of requests, used to calibrate routing.
 
-This is up from 1/5 in the first draft. The metadata signal is real, but it is thin compared with the cross-customer data a high-volume neutral router like OpenRouter collects.
+The metadata signal is real, but it is thin compared with the cross-customer data a high-volume neutral router like OpenRouter collects.
 
 **Named attackers:** Equinix, Akamai, AT&T, T-Mobile. Stripe/OpenRouter is the strongest on cross-customer model-performance data.
 
@@ -111,7 +109,7 @@ Exposure also differs by access type:
 
 ## Top Vulnerability
 
-Routing and guardrails are becoming commodity features of hyperscaler platforms and neutral routers (F5, Stripe/OpenRouter). DAII's defensibility therefore rests entirely on **network-driven intelligence, on-net sovereignty and regulated-industry trust**, not on the gateway itself.
+Routing and guardrails are becoming commodity features of hyperscaler platforms and neutral routers (F5, Stripe/OpenRouter). DAII's defensibility therefore rests entirely on **network-driven intelligence, on-net sovereignty and  trust for the regulated sector**, not on the gateway itself.
 
 ## Confidence Level
 
@@ -121,7 +119,7 @@ Routing and guardrails are becoming commodity features of hyperscaler platforms 
 - Research shows large savings from routing: RouteLLM reports 35–85% depending on the workload.
 - The market is validating the layer, through Stripe/OpenRouter and F5/CalypsoAI.
 
-What is still unproven is whether *network-aware* routing adds measurable value beyond network-blind routing. That is an explicit kill criterion in `prototype.md`.
+What is still unproven is whether *network-aware* routing adds measurable value beyond network-blind routing. That is an explicit kill criterion.
 
 ### Sources
 - Stripe agrees to acquire OpenRouter (Aug 19, 2026): https://siliconangle.com/2026/08/19/stripe-buys-ai-model-router-openrouter-in-reported-7-5b-deal/
